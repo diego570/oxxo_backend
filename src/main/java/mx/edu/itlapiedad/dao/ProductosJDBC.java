@@ -43,7 +43,7 @@ public class ProductosJDBC implements ProductosDAO {
 
 	@Override
 	public Productos buscar(int id) {
-		String sql_query = "SELECT * FROM productos";
+		String sql_query = "SELECT * FROM productos WHERE id=?";
 		return conexion.queryForObject(sql_query, new RowMapper<Productos>() {
 			public Productos mapRow(ResultSet rs, int rowNum) throws SQLException {
 				Productos productos = new Productos();
