@@ -21,4 +21,10 @@ public class ProductosLogic implements ProductosService {
 		return repositorio.consultarProductos();
 	}
 
+	@Override
+	public Productos buscar(int id) {
+		// TODO Auto-generated method stub
+		return repositorio.buscar(id);
+	}
+
 }
