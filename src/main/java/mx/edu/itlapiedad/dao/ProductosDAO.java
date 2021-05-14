@@ -12,4 +12,6 @@ public interface ProductosDAO {
 
 	Productos insertar(Productos productos);
 
+	void actualizar(Productos productos);
+
 }

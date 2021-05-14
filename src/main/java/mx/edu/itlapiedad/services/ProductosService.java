@@ -11,6 +11,8 @@ public interface ProductosService {
 	Productos buscar(int id);
 
 	Productos insertar(Productos productos);
+
+	void actualizar(Productos productos);
 	
 
 }
