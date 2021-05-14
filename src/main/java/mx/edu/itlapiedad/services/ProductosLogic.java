@@ -11,10 +11,10 @@ import mx.edu.itlapiedad.models.Productos;
 @Service
 
 public class ProductosLogic implements ProductosService {
-	
-    @Autowired
-    ProductosDAO repositorio;
-	
+
+	@Autowired
+	ProductosDAO repositorio;
+
 	@Override
 	public List<Productos> consultarProductos() {
 
@@ -26,19 +26,23 @@ public class ProductosLogic implements ProductosService {
 		// TODO Auto-generated method stub
 		return repositorio.buscar(id);
 	}
-	
+
 	@Override
 	public Productos insertar(Productos productos) {
-		
+
 		return repositorio.insertar(productos);
 	}
 
 	@Override
 	public void actualizar(Productos productos) {
 		repositorio.actualizar(productos);
-		
+
+	}
+
+	@Override
+	public void eliminar(int id) {
+		// TODO Auto-generated method stub
+		repositorio.eliminar(id);
 	}
 
 }
-
-

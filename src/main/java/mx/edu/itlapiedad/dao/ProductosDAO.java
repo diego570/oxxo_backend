@@ -14,4 +14,8 @@ public interface ProductosDAO {
 
 	void actualizar(Productos productos);
 
+	void eliminar(int id);
+
+	
+
 }

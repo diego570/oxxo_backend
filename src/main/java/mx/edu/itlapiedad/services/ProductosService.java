@@ -13,6 +13,8 @@ public interface ProductosService {
 	Productos insertar(Productos productos);
 
 	void actualizar(Productos productos);
+
+	void eliminar(int id);
 	
 
 }

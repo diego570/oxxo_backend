@@ -81,7 +81,7 @@ public class ProductosJDBC implements ProductosDAO {
 	
 	@Override
 	public void actualizar(Productos productos) {
-		String sql_update = "UPDATE c_productos SET descripcion = ?, precio = ?, codigo_barras = ?, "
+		String sql_update = "UPDATE productos SET descripcion = ?, precio = ?, codigo_barras = ?, "
 				+ "existencia = ? WHERE id = ?";
 		conexion.update(sql_update, 
 		        productos.getDescripcion(),
@@ -91,6 +91,14 @@ public class ProductosJDBC implements ProductosDAO {
 		        productos.getId());
 		        
 			}
+
+
+	@Override
+	public void eliminar(int id) {
+		String deleteQuery = "delete from productos where id = ?";
+		conexion.update(deleteQuery, id);
+		
+	}
 
 
 }
