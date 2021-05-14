@@ -1,4 +1,4 @@
-package mx.edu.itlapiedad.dao;
+package mx.edu.itlapiedad.dao.Productos;
 
 import java.util.List;
 

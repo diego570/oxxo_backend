@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import mx.edu.itlapiedad.models.Productos;
-import mx.edu.itlapiedad.services.ProductosService;
+import mx.edu.itlapiedad.services.Productos.ProductosService;
 
 @RestController
 @RequestMapping("/devops/productos")

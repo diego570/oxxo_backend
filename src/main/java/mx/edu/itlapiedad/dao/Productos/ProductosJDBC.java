@@ -1,4 +1,4 @@
-package mx.edu.itlapiedad.dao;
+package mx.edu.itlapiedad.dao.Productos;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -74,8 +74,9 @@ public class ProductosJDBC implements ProductosDAO {
 	         datos.put("precio", productos.getPrecio());
 	datos.put("codigo_barras", productos.getCodigo_barras());
 	datos.put("existencia", productos.getExistencia());
-		
+	
 		Number id=insert.executeAndReturnKey(datos);
+		productos.setActivo(1);
 		productos.setId(id.intValue());
 		return productos;
 	}
