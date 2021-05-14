@@ -26,7 +26,7 @@ public class ProductosJDBC implements ProductosDAO {
 	
 	@Override
 	public List<Productos> consultarProductos() {
-		String sql_query = "SELECT * FROM productos";
+		String sql_query = "SELECT * FROM productos where activo=1";
 		return conexion.query(sql_query, new RowMapper<Productos>() {
 			public Productos mapRow(ResultSet rs,int rowNum) throws SQLException {
 				Productos productos = new Productos();
@@ -35,6 +35,7 @@ public class ProductosJDBC implements ProductosDAO {
 				productos.setPrecio(rs.getFloat("precio"));
 				productos.setCodigo_barras(rs.getString("codigo_barras"));
 				productos.setExistencia(rs.getInt("existencia"));
+				productos.setActivo(rs.getInt("activo"));
 				return productos;
 				
 			}
@@ -55,6 +56,7 @@ public class ProductosJDBC implements ProductosDAO {
 				productos.setPrecio(rs.getFloat("precio"));
 				productos.setCodigo_barras(rs.getString("codigo_barras"));
 				productos.setExistencia(rs.getInt("existencia"));
+				productos.setActivo(rs.getInt("activo"));
 				return productos;
 			}
 			
@@ -95,8 +97,8 @@ public class ProductosJDBC implements ProductosDAO {
 
 	@Override
 	public void eliminar(int id) {
-		String deleteQuery = "delete from productos where id = ?";
-		conexion.update(deleteQuery, id);
+		String sql_update="UPDATE productos SET activo=0 WHERE id=?";
+		conexion.update(sql_update,id);
 		
 	}
 
