@@ -21,9 +21,9 @@ jobs:
       with:
         java-version: 1.8
     - name: Compilar y empaquetar con maven
-      run: mvn -B package --file oxxo_backend/pom.xml
+      run: mvn -B package --file backend/pom.xml
     - name: subir .jar
       uses: actions/upload-artifact@v1
       with:
-        name: oxxo_backend
-        path: oxxo_backend/target/oxxo_backend-0.0.1.jar
+        name: backend
+        path: backend/target/backend-0.0.1.jar
