@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import mx.edu.itlapiedad.models.Ticket_renglones;
+import mx.edu.itlapiedad.models.Ticket_renglones_importe;
 import mx.edu.itlapiedad.services.Tickets_renglones.Ticket_renglonesService;
 
 @RestController
@@ -88,6 +89,18 @@ public class Ticket_renglonesWS {
 
 		return new ResponseEntity<Ticket_renglones>(HttpStatus.OK);
 
+	}
+	
+	@GetMapping("/importe_cajero/{id}")
+	public ResponseEntity<?> buscar_importe_cajero(@PathVariable int id) {
+		List<Ticket_renglones_importe> resultado;
+		try {
+			resultado = servicio.buscar_importe_cajero(id);
+		} catch (DataAccessException e) {
+			System.out.println(e);
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<Ticket_renglones_importe>>(resultado, HttpStatus.OK);
 	}
 
 }

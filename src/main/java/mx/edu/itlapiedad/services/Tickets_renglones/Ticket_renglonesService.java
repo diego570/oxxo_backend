@@ -3,6 +3,7 @@ package mx.edu.itlapiedad.services.Tickets_renglones;
 import java.util.List;
 
 import mx.edu.itlapiedad.models.Ticket_renglones;
+import mx.edu.itlapiedad.models.Ticket_renglones_importe;
 
 public interface Ticket_renglonesService {
 
@@ -15,6 +16,10 @@ public interface Ticket_renglonesService {
 	void actualizar(Ticket_renglones ticket_renglones);
 
 	void eliminar(int id);
+
+	List<Ticket_renglones_importe> buscar_importe_cajero(int id);
+
+
 
 	
 

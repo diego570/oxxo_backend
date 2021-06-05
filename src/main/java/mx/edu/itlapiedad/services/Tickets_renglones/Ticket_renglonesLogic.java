@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import mx.edu.itlapiedad.dao.Ticket_renglones.Ticket_renglonesDAO;
 import mx.edu.itlapiedad.models.Ticket_renglones;
+import mx.edu.itlapiedad.models.Ticket_renglones_importe;
 
 @Service
 public class Ticket_renglonesLogic implements Ticket_renglonesService {
@@ -42,4 +43,14 @@ repositorio.actualizar(ticket_renglones);
 		// TODO Auto-generated method stub
 repositorio.eliminar(id);
 	}
+
+	@Override
+	public List<Ticket_renglones_importe> buscar_importe_cajero(int id) {
+		// TODO Auto-generated method stub
+		return repositorio.buscar_importe_cajero(id);
+	}
+
+	
+
+	
 }
