@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/devops")
 public class Mensaje {
- 
+ //Equipo Jose Manuel, Diego, Michel
+	
 	@GetMapping("/hola")
 	public String mostrarHola(@RequestParam String nombre) {
 		return "Hola " + nombre; 

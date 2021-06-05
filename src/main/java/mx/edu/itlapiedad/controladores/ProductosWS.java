@@ -70,7 +70,7 @@ public class ProductosWS {
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
 	
-	//metodo de eliminar por id
+	//metodo de eliminar por id los productos
 			@DeleteMapping("/{id}")
 			public ResponseEntity<?>eliminarProducto(@PathVariable int id){
 				
