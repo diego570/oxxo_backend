@@ -1,13 +1,13 @@
 package mx.edu.itlapiedad.models;
 
 public class Ticket_renglones_importe {
-	private float importe;
+	private float importeTotal;
 
-	public float getImporte() {
-		return importe;
+	public float getImporteTotal() {
+		return importeTotal;
 	}
 
-	public void setImporte(float importe) {
-		this.importe = importe;
+	public void setImporteTotal(float importeTotal) {
+		this.importeTotal = importeTotal;
 	}
 }
